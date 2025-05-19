@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume & JD Analyzer</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --success-color: #27ae60;
+            --error-color: #e74c3c;
+            --light-bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 15px;
+            text-align: center;
+            flex-shrink: 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.8), rgba(255,255,255,0));
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            background-color: var(--light-bg);
+        }
+        
+        .input-section {
+            display: flex;
+            flex: 1;
+            padding: 15px;
+            gap: 15px;
+            border-bottom: 1px solid #e0e6ed;
+        }
+        
+        .input-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .input-column:hover {
+            transform: translateY(-2px);
+        }
+        
+        .input-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e6ed;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .input-box:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .input-box h3 {
+            margin: 0 0 10px 0;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .input-box h3::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            margin-right: 8px;
+        }
+        
+        textarea {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #e0e6ed;
+            border-radius: 6px;
+            resize: none;
+            font-size: 14px;
+            line-height: 1.6;
+            background-color: #f9fafc;
+            transition: all 0.3s ease;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+        }
+        
+        .file-upload {
+            margin-top: 12px;
+        }
+        
+        .file-upload-btn {
+            background-color: #e8f4fc;
+            color: var(--text-dark);
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid #d6e4f0;
+            transition: all 0.3s ease;
+        }
+        
+        .file-upload-btn:hover {
+            background-color: #d6eaf8;
+            transform: translateY(-1px);
+        }
+        
+        .file-upload-btn::before {
+            content: '📎';
+            margin-right: 6px;
+            font-size: 14px;
+        }
+        
+        .file-name {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .action-buttons {
+            padding: 15px;
+            text-align: left;
+            flex-shrink: 0;
+            border-bottom: 1px solid #e0e6ed;
+            background-color: var(--card-bg);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .analyze-btn {
+            padding: 10px 25px;
+            background: linear-gradient(135deg, var(--primary-color), #2980b9);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .analyze-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 50px;
+            height: 200%;
+            background: rgba(255,255,255,0.2);
+            transform: rotate(30deg);
+            transition: all 0.3s;
+        }
+        
+        .analyze-btn:hover {
+            background: linear-gradient(135deg, #2980b9, var(--primary-color));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .analyze-btn:hover::after {
+            left: 120%;
+        }
+        
+        .analyze-btn:disabled {
+            background: #bdc3c7;
+            transform: none;
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+        
+        .analyze-btn:disabled::after {
+            display: none;
+        }
+        
+        .output-section {
+            flex: 1;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--light-bg);
+        }
+        
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .output-header h3 {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .output-box {
+            flex: 1;
+            border: 1px solid #e0e6ed;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .output-box:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        #results {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #e0e6ed;
+            border-radius: 6px;
+            background-color: #f9fafc;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.6;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        
+        .copy-btn {
+            padding: 8px 15px;
+            background-color: #e8f4fc;
+            color: var(--text-dark);
+            border: 1px solid #d6e4f0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .copy-btn::before {
+            content: '📋';
+            margin-right: 6px;
+        }
+        
+        .copy-btn:hover {
+            background-color: #d6eaf8;
+            transform: translateY(-1px);
+        }
+        
+        .copy-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: #ecf0f1;
+            transform: none;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, var(--secondary-color), #34495e);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+        
+        .status-message {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .status-message::before {
+            content: 'ℹ️';
+            margin-right: 5px;
+        }
+        
+        @keyframes subtleGlow {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        
+        .blinking-text {
+            animation: subtleGlow 3s infinite ease-in-out;
+            font-size: 0.95rem;
+            margin-top: 10px;
+            color: #e6f7ff;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .input-section {
+                flex-direction: column;
+            }
+            .header h1 {
+                font-size: 1.4rem;
+            }
+        }
+        
+        .api-input-container {
+            padding: 10px 15px;
+            background-color: #e8f4fc;
+            border-bottom: 1px solid #d6e4f0;
+        }
+        
+        .api-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d6e4f0;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .api-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(52,152,219,0.1);
+        }
+        
+        /* Options section */
+        .options-section {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+        
+        .option-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .option-group label {
+            font-size: 13px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        
+        .option-group select {
+            padding: 8px 12px;
+            border: 1px solid #d6e4f0;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .option-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(52,152,219,0.1);
+        }
+        
+        /* Score display styles */
+        .score-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        
+        .score-ring {
+            width: 140px;
+            height: 140px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .score-ring-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: conic-gradient(
+                #4CAF50 0%,
+                #8BC34A var(--percentage),
+                #f0f0f0 var(--percentage),
+                #f0f0f0 100%
+            );
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: all 0.5s ease;
+        }
+        
+        .score-ring-inner {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+        }
+        
+        .score-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+        
+        .score-label {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 8px;
+        }
+        
+        .score-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 12px;
+        }
+        
+        /* Optimization points styles */
+        .optimization-section {
+            margin-top: 25px;
+            padding: 18px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .optimization-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .optimization-section h4 {
+            margin: 0 0 12px 0;
+            color: var(--text-dark);
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .optimization-section h4::before {
+            content: '✨';
+            margin-right: 8px;
+        }
+        
+        .optimization-points {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #34495e;
+        }
+        
+        .optimization-points p {
+            margin: 8px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .optimization-points p::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+        
+        /* Download button styles */
+        .download-btn {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--success-color), #2ecc71);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+        }
+        
+        .download-btn::before {
+            content: '⬇️';
+            margin-right: 8px;
+        }
+        
+        .download-btn:hover {
+            background: linear-gradient(135deg, #2ecc71, var(--success-color));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        /* Glowing border effect */
+        @keyframes border-glow {
+            0% { box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(52, 152, 219, 0.8); }
+            100% { box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); }
+        }
+        
+        .glowing-border {
+            animation: border-glow 3s infinite ease-in-out;
+        }
+        
+        /* Loading spinner */
+        .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Resume & JD Analyzer</h1>
+        <p class="blinking-text">Paste only the job description and resume content—leave out the company details and benefits for a Better Output.</p>
+    </div>
+    <div class="api-input-container">
+        <input type="text" id="apiEndpoint" class="api-input" 
+               placeholder="Enter API endpoint (e.g., https://your-api.com/analyze)" 
+               value="plese enter url here then ony you can get resposne ">
+    </div>
+    
+    <div class="main-container">
+        <div class="input-section">
+            <div class="input-column">
+                <div class="input-box">
+                    <h3>Job Description (Paste Only)</h3>
+                    <textarea id="jobDescription" placeholder="Paste job description here..."></textarea>
+                    <div id="jdStatus" class="status-message">No job description entered</div>
+                </div>
+            </div>
+            <div class="input-column">
+                <div class="input-box">
+                    <h3>Resume (Paste or Upload)</h3>
+                    <textarea id="resumeText" placeholder="Paste resume text here..."></textarea>
+                    <div class="file-upload">
+                        <label class="file-upload-btn">
+                            <input type="file" id="resumeFile" style="display: none;" accept=".pdf,.doc,.docx,.txt">
+                            Choose File
+                        </label>
+                        <div id="fileName" class="file-name">No file selected</div>
+                        <div id="resumeStatus" class="status-message">No resume provided</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <div class="options-section">
+                <div class="option-group">
+                    <label for="fontStyle">Font Style</label>
+                    <select id="fontStyle">
+                        <option value="Calibri" selected>Calibri</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="fileFormat">Output Format</label>
+                    <select id="fileFormat">
+                        <option value="doc" selected>DOC</option>
+                        <option value="pdf">PDF</option>
+                    </select>
+                </div>
+            </div>
+            <button id="analyzeBtn" class="analyze-btn">
+                <span class="spinner" id="spinner"></span>
+                <span id="analyzeBtnText">Analyze</span>
+            </button>
+            <div id="apiStatus" class="status-message">Ready to analyze</div>
+        </div>
+
+        <div class="output-section">
+            <div class="output-header">
+                <h3>Analysis Results</h3>
+                <button id="copyBtn" class="copy-btn" disabled>Copy Content</button>
+            </div>
+            <div class="output-box" id="outputBox">
+                <div id="scoreDisplay" style="display: none;">
+                    <div class="score-container">
+                        <div class="score-ring">
+                            <div class="score-title">Before Optimization</div>
+                            <div class="score-ring-circle" id="beforeScoreRing">
+                                <div class="score-ring-inner">
+                                    <div class="score-value" id="beforeScoreValue">0%</div>
+                                    <div class="score-label">ATS Score</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="score-ring">
+                            <div class="score-title">After Optimization</div>
+                            <div class="score-ring-circle" id="afterScoreRing">
+                                <div class="score-ring-inner">
+                                    <div class="score-value" id="afterScoreValue">0%</div>
+                                    <div class="score-label">ATS Score</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="optimization-section">
+                        <h4>Optimization Points</h4>
+                        <div class="optimization-points" id="optimizationPoints"></div>
+                    </div>
+                    
+                    <button id="downloadBtn" class="download-btn" style="display: none;">Download Optimized Resume</button>
+                </div>
+                <div id="results">Results will appear here after analysis...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Developer: Yallaiah Onteru | Email: Onteruyallaiah970@gmail.com
+        ALL RIGHTS ARE RESERVED @2025
+    </div>
+
+    <script>
+        // Debug flag
+        const DEBUG_MODE = true;
+        
+        // Utility function for debug logging
+        function debugLog(message, data = null) {
+            if (DEBUG_MODE) {
+                const timestamp = new Date().toISOString();
+                if (data) {
+                    console.log(`[DEBUG] ${timestamp} - ${message}`, data);
+                } else {
+                    console.log(`[DEBUG] ${timestamp} - ${message}`);
+                }
+            }
+        }
+
+        // DOM Elements
+        const elements = {
+            apiEndpoint: document.getElementById('apiEndpoint'),
+            jobDescription: document.getElementById('jobDescription'),
+            resumeText: document.getElementById('resumeText'),
+            resumeFile: document.getElementById('resumeFile'),
+            fileName: document.getElementById('fileName'),
+            analyzeBtn: document.getElementById('analyzeBtn'),
+            analyzeBtnText: document.getElementById('analyzeBtnText'),
+            spinner: document.getElementById('spinner'),
+            resultsDiv: document.getElementById('results'),
+            copyBtn: document.getElementById('copyBtn'),
+            jdStatus: document.getElementById('jdStatus'),
+            resumeStatus: document.getElementById('resumeStatus'),
+            apiStatus: document.getElementById('apiStatus'),
+            fontStyle: document.getElementById('fontStyle'),
+            fileFormat: document.getElementById('fileFormat'),
+            scoreDisplay: document.getElementById('scoreDisplay'),
+            beforeScoreRing: document.getElementById('beforeScoreRing'),
+            afterScoreRing: document.getElementById('afterScoreRing'),
+            beforeScoreValue: document.getElementById('beforeScoreValue'),
+            afterScoreValue: document.getElementById('afterScoreValue'),
+            optimizationPoints: document.getElementById('optimizationPoints'),
+            downloadBtn: document.getElementById('downloadBtn'),
+            outputBox: document.getElementById('outputBox')
+        };
+
+        // State management
+        const appState = {
+            jdEntered: false,
+            resumeProvided: false,
+            fileUploaded: false,
+            apiCallInProgress: false,
+            optimizedResumeUrl: null
+        };
+
+        // Update status messages
+        function updateStatusMessages() {
+            debugLog('Updating status messages');
+            
+            elements.jdStatus.textContent = appState.jdEntered 
+                ? 'Job description ready' 
+                : 'No job description entered';
+            elements.jdStatus.style.color = appState.jdEntered ? 'var(--success-color)' : 'var(--error-color)';
+
+            if (appState.fileUploaded) {
+                elements.resumeStatus.textContent = 'Resume file uploaded';
+                elements.resumeStatus.style.color = 'var(--success-color)';
+            } else if (elements.resumeText.value.trim()) {
+                elements.resumeStatus.textContent = 'Resume text entered';
+                elements.resumeStatus.style.color = 'var(--success-color)';
+            } else {
+                elements.resumeStatus.textContent = 'No resume provided';
+                elements.resumeStatus.style.color = 'var(--error-color)';
+            }
+
+            appState.resumeProvided = appState.fileUploaded || elements.resumeText.value.trim().length > 0;
+            
+            // Update button state
+            elements.analyzeBtn.disabled = !(appState.jdEntered && appState.resumeProvided) || appState.apiCallInProgress;
+        }
+
+        // Event Listeners
+        function setupEventListeners() {
+            debugLog('Setting up event listeners');
+            
+            // Job Description input (log only first input)
+            let jdInitialLogged = false;
+            elements.jobDescription.addEventListener('input', function() {
+                appState.jdEntered = this.value.trim().length > 0;
+                updateStatusMessages();
+                
+                if (!jdInitialLogged && appState.jdEntered) {
+                    debugLog('Job description entered', { length: this.value.trim().length });
+                    jdInitialLogged = true;
+                }
+            });
+
+            // Resume Text input (log only first input)
+            let resumeInitialLogged = false;
+            elements.resumeText.addEventListener('input', function() {
+                updateStatusMessages();
+                
+                if (!resumeInitialLogged && this.value.trim().length > 0) {
+                    debugLog('Resume text entered', { length: this.value.trim().length });
+                    resumeInitialLogged = true;
+                }
+            });
+
+            // File upload
+            elements.resumeFile.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    const file = e.target.files[0];
+                    elements.fileName.textContent = file.name;
+                    appState.fileUploaded = true;
+                    
+                    // Validate file type
+                    const validTypes = ['application/pdf', 'application/msword', 
+                                      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                                      'text/plain'];
+                    if (!validTypes.includes(file.type)) {
+                        elements.resumeStatus.textContent = 'Invalid file type (PDF, DOC, DOCX, TXT only)';
+                        elements.resumeStatus.style.color = 'var(--error-color)';
+                        appState.fileUploaded = false;
+                        elements.analyzeBtn.disabled = true;
+                    }
+                    
+                    debugLog('File selected', { 
+                        name: file.name, 
+                        type: file.type, 
+                        size: file.size 
+                    });
+                } else {
+                    elements.fileName.textContent = 'No file selected';
+                    appState.fileUploaded = false;
+                    debugLog('File selection cleared');
+                }
+                updateStatusMessages();
+            });
+
+            // Font style change
+            elements.fontStyle.addEventListener('change', function() {
+                debugLog('Font style changed', { value: this.value });
+            });
+
+            // File format change
+            elements.fileFormat.addEventListener('change', function() {
+                debugLog('File format changed', { value: this.value });
+            });
+
+            // Analyze button
+            elements.analyzeBtn.addEventListener('click', analyzeDocuments);
+
+            // Copy button
+            elements.copyBtn.addEventListener('click', copyResults);
+            
+            // Download button
+            elements.downloadBtn.addEventListener('click', downloadResume);
+        }
+
+        // Analyze documents
+        async function analyzeDocuments() {
+            debugLog('Analyze button clicked');
+            
+            const jd = elements.jobDescription.value.trim();
+            const resume = elements.resumeText.value.trim();
+            const file = elements.resumeFile.files[0];
+            const apiEndpoint = elements.apiEndpoint.value.trim();
+            const fontStyle = elements.fontStyle.value;
+            const fileFormat = elements.fileFormat.value;
+            
+            debugLog('Analysis parameters', {
+                jdLength: jd.length,
+                resumeLength: resume.length,
+                file: file ? file.name : 'none',
+                apiEndpoint,
+                fontStyle,
+                fileFormat
+            });
+            
+            // Validate inputs (should already be validated by button state)
+            if (!jd) {
+                showError('Job description is required');
+                return;
+            }
+            
+            if (!resume && !file) {
+                showError('Please provide either resume text or upload a file');
+                return;
+            }
+            
+            if (!apiEndpoint) {
+                showError('API endpoint is required');
+                return;
+            }
+            
+            // Update UI for API call
+            appState.apiCallInProgress = true;
+            updateStatusMessages();
+            elements.analyzeBtn.disabled = true;
+            elements.analyzeBtnText.textContent = 'Processing...';
+            elements.spinner.style.display = 'inline-block';
+            elements.apiStatus.textContent = 'Sending request to server...';
+            elements.apiStatus.style.color = 'var(--primary-color)';
+            elements.resultsDiv.textContent = 'Analyzing documents... Please wait';
+            elements.scoreDisplay.style.display = 'none';
+            elements.downloadBtn.style.display = 'none';
+            
+            try {
+                debugLog('Preparing form data for API call');
+                const formData = new FormData();
+                formData.append('job_description', jd);
+                formData.append('font_style', fontStyle);
+                formData.append('file_format', fileFormat);
+                
+                if (file) {
+                    debugLog('Using uploaded file', { name: file.name });
+                    formData.append('resume_file', file);
+                } else {
+                    debugLog('Using pasted resume text', { length: resume.length });
+                    formData.append('resume_text', resume);
+                }
+                
+                debugLog('Making API request to server');
+                const startTime = performance.now();
+                
+                const response = await fetch(apiEndpoint, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const endTime = performance.now();
+                debugLog(`API call completed in ${(endTime - startTime).toFixed(2)}ms`, {
+                    status: response.status,
+                    statusText: response.statusText
+                });
+                
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.error || `Server returned ${response.status} status`);
+                }
+                
+                const result = await response.json();
+                debugLog('Received response from server', result);
+                
+                // Display the results
+                displayResults(result);
+                elements.copyBtn.disabled = false;
+                elements.apiStatus.textContent = 'Analysis completed successfully';
+                elements.apiStatus.style.color = 'var(--success-color)';
+                
+                // Add glowing border effect
+                elements.outputBox.classList.add('glowing-border');
+                setTimeout(() => {
+                    elements.outputBox.classList.remove('glowing-border');
+                }, 3000);
+                
+            } catch (error) {
+                debugLog('Error during analysis', error);
+                showError(error.message);
+                elements.apiStatus.textContent = 'Analysis failed';
+                elements.apiStatus.style.color = 'var(--error-color)';
+                
+            } finally {
+                appState.apiCallInProgress = false;
+                elements.analyzeBtn.disabled = false;
+                elements.analyzeBtnText.textContent = 'Analyze';
+                elements.spinner.style.display = 'none';
+                updateStatusMessages();
+            }
+        }
+
+        // Display results
+        function displayResults(result) {
+            debugLog('Displaying results', {
+                beforeScore: result.ats_score_before,
+                afterScore: result.ats_score_after,
+                hasOptimizationPoints: !!result.optimization_points,
+                hasResumeUrl: !!result.optimized_resume_url
+            });
+            
+            // Hide the default results div and show the score display
+            elements.resultsDiv.style.display = 'none';
+            elements.scoreDisplay.style.display = 'block';
+            
+            // Update scores
+            if (result.ats_score_before !== undefined) {
+                const beforeScore = Math.round(result.ats_score_before);
+                elements.beforeScoreRing.style.setProperty('--percentage', `${beforeScore}%`);
+                elements.beforeScoreValue.textContent = `${beforeScore}%`;
+            }
+            
+            if (result.ats_score_after !== undefined) {
+                const afterScore = Math.round(result.ats_score_after);
+                elements.afterScoreRing.style.setProperty('--percentage', `${afterScore}%`);
+                elements.afterScoreValue.textContent = `${afterScore}%`;
+            }
+            
+            // Update optimization points
+            if (result.optimization_points) {
+                elements.optimizationPoints.innerHTML = result.optimization_points
+                    .split('\n')
+                    .map(point => point.trim() ? `<p>${point}</p>` : '')
+                    .join('');
+            }
+            
+            // Show download button if we have a resume URL
+            if (result.optimized_resume_url) {
+                appState.optimizedResumeUrl = result.optimized_resume_url;
+                elements.downloadBtn.style.display = 'block';
+            } else {
+                elements.downloadBtn.style.display = 'none';
+            }
+        }
+
+        // Download optimized resume
+        function downloadResume() {
+            if (!appState.optimizedResumeUrl) {
+                showError('No optimized resume available for download');
+                return;
+            }
+            
+            debugLog('Initiating download of optimized resume', {
+                url: appState.optimizedResumeUrl,
+                format: elements.fileFormat.value
+            });
+            
+            // Create a temporary anchor element to trigger the download
+            const a = document.createElement('a');
+            a.href = appState.optimizedResumeUrl;
+            a.download = `optimized_resume.${elements.fileFormat.value}`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            debugLog('Download initiated');
+        }
+
+        // Show error message
+        function showError(message) {
+            debugLog('Showing error message', { message });
+            elements.resultsDiv.style.display = 'block';
+            elements.scoreDisplay.style.display = 'none';
+            elements.resultsDiv.textContent = `Error: ${message}`;
+            elements.resultsDiv.style.color = 'var(--error-color)';
+            setTimeout(() => {
+                elements.resultsDiv.style.color = '';
+            }, 3000);
+        }
+
+        // Copy results to clipboard
+        function copyResults() {
+            const text = elements.optimizationPoints.textContent;
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    debugLog('Results copied to clipboard');
+                    elements.copyBtn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        elements.copyBtn.textContent = 'Copy Content';
+                    }, 2000);
+                })
+                .catch(err => {
+                    debugLog('Failed to copy results', err);
+                    showError('Failed to copy results to clipboard');
+                });
+        }
+
+        // Initialize the application
+        function init() {
+            debugLog('Initializing application');
+            setupEventListeners();
+            updateStatusMessages();
+            
+            // Check if there's any initial data
+            if (elements.jobDescription.value.trim()) {
+                appState.jdEntered = true;
+                debugLog('Initial job description found', { 
+                    length: elements.jobDescription.value.trim().length 
+                });
+            }
+            
+            if (elements.resumeText.value.trim()) {
+                appState.resumeProvided = true;
+                debugLog('Initial resume text found', { 
+                    length: elements.resumeText.value.trim().length 
+                });
+            } else if (elements.resumeFile.files.length > 0) {
+                appState.resumeProvided = true;
+                appState.fileUploaded = true;
+                debugLog('Initial file found', { 
+                    name: elements.resumeFile.files[0].name 
+                });
+            }
+            
+            updateStatusMessages();
+            debugLog('Application initialized');
+        }
+
+        // Start the app when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

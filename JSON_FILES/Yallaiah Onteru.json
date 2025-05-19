@@ -1,0 +1,276 @@
+{
+    "name": "Yallaiah Onteru",
+    "title": "Data Engineer",
+    "contact": {
+        "email": "onteruyallaiah414@gmail.com",
+        "phone": "+1(414)-275-0857",
+        "linkedin": "https://linkedin.com/in/yallaiah-onteru"
+    },
+    "professional_summary": [
+        "5.8+ years of experience as a Data Engineer specializing in Big Data technologies, Cloud Platforms (Azure & AWS), and data pipeline architecture, with a focus on the insurance and finance sectors.",
+        "Expertise in designing scalable ETL/ELT workflows and real-time streaming pipelines using Apache Spark (Scala, PySpark, Java), ADF, NiFi, Kafka, Kinesis, and Airflow.",
+        "Proficient in Azure services including Data Factory (ADF), ADLS, Synapse Analytics, Azure SQL DB, Cosmos DB, HDInsight, Azure Key Vault, Service Fabric, and Azure DevOps."
+    ],
+    "technical_skills": {
+        "Big Data Tools": [
+            "Apache Spark",
+            "Hadoop",
+            "HDFS",
+            "Hive",
+            "Pig",
+            "Kafka",
+            "Sqoop",
+            "Flume",
+            "MapReduce"
+        ],
+        "Programming Languages": [
+            "Python",
+            "SQL",
+            "Scala",
+            "Java",
+            "R",
+            "Shell Scripting"
+        ],
+        "ETL & Workflow Tools": [
+            "Apache NiFi",
+            "Talend",
+            "Informatica",
+            "Airflow"
+        ],
+        "Cloud Platforms": [
+            "AWS (S3, EMR, Glue, Lambda, Redshift, Kinesis, Athena, EC2, IAM, RDS, CloudWatch, Quicksight)",
+            "Azure (ADF, ADLS, Synapse, Databricks, Azure SQL DB, Cosmos DB, HDInsight, Key Vault, Service Fabric, DevOps)"
+        ],
+        "Databases": [
+            "Oracle",
+            "MySQL",
+            "PostgreSQL",
+            "NoSQL",
+            "MongoDB",
+            "Cassandra",
+            "Snowflake"
+        ],
+        "Data Modeling & Warehousing": [
+            "Dimensional modeling",
+            "Star/Snowflake schema",
+            "Data Lakes",
+            "Data Marts",
+            "MLOps",
+            "MLflow",
+            "Kubeflow"
+        ],
+        "DevOps & CI/CD": [
+            "Git",
+            "Jenkins",
+            "Docker",
+            "Terraform",
+            "CloudFormation"
+        ],
+        "Visualization Tools": [
+            "Power BI",
+            "Tableau",
+            "AWS QuickSight"
+        ],
+        "AI/ML & GenAI": [
+            "LLM",
+            "M-Llib",
+            "Scikit-learn",
+            "pandas",
+            "NumPy",
+            "pytorch",
+            "LangChain",
+            "RAG",
+            "GPT",
+            "Prompt Engineering",
+            "AI/ML model development, deployment and optimization",
+            "TensorFlow",
+            "PyTorch",
+            "Scikit-learn",
+            "ML algorithms",
+            "supervised learning",
+            "unsupervised learning",
+            "reinforcement learning",
+            "data preprocessing",
+            "SQL",
+            "NoSQL databases",
+            "natural language processing",
+            "computer vision",
+            "recommendation systems",
+            "big data technologies",
+            "Spark",
+            "Hadoop",
+            "data visualization tools"
+        ],
+        "Others": [
+            "Data Governance",
+            "Data Quality Frameworks",
+            "Agile",
+            "Jira",
+            "Confluence"
+        ]
+    },
+    "experience": [
+        {
+            "role": "Azure Data Engineer",
+            "client": "PNC Bank",
+            "duration": "April 2024 – Present",
+            "responsibilities": [
+                "Designed and implemented enterprise-grade ETL pipelines with Azure Databricks and Apache Spark, processing 10TB of insurance policy data daily for underwriting and risk analysis, utilizing advanced ML algorithms for enhanced data processing.",
+                "Led the architecture and development of a Data Mart in the CDP Layer, feeding data to 22 AI/ML models and enhancing real-time analytics for report generation, ensuring data-driven insights.",
+                "Implemented medallion architecture in Azure Databricks for PNC Bank’s CDP Layer, ensuring secure and efficient data processing, adhering to industry-standard security practices.",
+                "Migrated legacy ETL workflows from Hadoop to Azure cloud, optimizing performance, scalability, and reducing operational costs by 30%, leveraging cloud-native tools for seamless migration.",
+                "Built and managed Delta Lake tables, utilizing partitioning and Z-order optimization techniques for faster data processing and improved data accessibility, reducing query execution times.",
+                "Developed and deployed reusable data ingestion frameworks using Azure Data Factory, NiFi, and Python, integrating various data sources (including SQL Server, Oracle, and flat files) into Azure Data Lake and Synapse for centralized data storage.",
+                "Implemented real-time streaming pipelines using Kafka and Azure Databricks for policy updates, feeding downstream systems such as Azure Cosmos DB and SQL, enabling real-time data processing and analytics.",
+                "Integrated data quality frameworks in Azure Databricks using PySpark for schema validation, anomaly detection, and data integrity checks, ensuring data accuracy and consistency throughout the pipeline.",
+                "Automated CI/CD workflows with Azure DevOps for seamless data pipeline deployment and smooth updates across environments, reducing deployment times and improving efficiency.",
+                "Optimized query performance using AWS Redshift, achieving up to 30% faster query execution, leveraging columnar storage and parallel processing for efficient data retrieval."
+            ],
+            "environment": [
+                "Azure Databricks",
+                "Databricks Unity Catalog",
+                "ADF",
+                "Azure Data Lake Storage Gen2",
+                "Azure Synapse Analytics",
+                "Azure Blob Storage",
+                "Azure SQL",
+                "Azure Key Vault",
+                "Azure Functions",
+                "Azure DevOps",
+                "Azure Monitor",
+                "Azure Log Analytics",
+                "Azure RBAC",
+                "Microsoft Fabric",
+                "Apache Spark",
+                "PySpark",
+                "Delta Lake",
+                "Apache Kafka",
+                "Spark Structured Streaming",
+                "HDFS",
+                "Apache NiFi",
+                "SQL Server",
+                "SQL Server Management Studio(SSMS)",
+                "Kubernetes",
+                "Row-Level Security",
+                "Column Masking",
+                "Encryption",
+                "LangChain",
+                "OpenAI APIs",
+                "Python"
+            ]
+        },
+        {
+            "role": "Cloud Data Engineer",
+            "client": "Prudential",
+            "duration": "Dec 2020 – Sept 2023",
+            "responsibilities": [
+                "Designed and implemented scalable ETL pipelines using AWS Glue, Apache Spark (PySpark), and Python for financial and insurance data, enabling efficient data transformations for loan applications and insurance claims processing, adhering to GDPR compliance standards.",
+                "Managed a secure data lake architecture on Amazon S3, integrated with AWS Lake Formation and AWS Macie for access control and data security, ensuring data privacy and confidentiality.",
+                "Utilized AWS Lambda and Apache Kafka for serverless and real-time processing of insurance and loan data, optimizing performance and reducing latency.",
+                "Migrated legacy RDBMS data (Oracle) to AWS cloud services (S3 and Redshift) for centralized processing, improving query performance and reducing execution times by up to 30%, leveraging cloud-native features.",
+                "Developed REST APIs using Flask and Python to expose loan and insurance datasets for internal applications, enabling seamless data integration and access.",
+                "Integrated Salesforce, ServiceNow, and SAP data into the AWS data lake, providing unified customer analytics and real-time business insights, enhancing data-driven decision-making.",
+                "Performed NPV calculations and basic business financial modeling to support data-driven ROI decisions, ensuring cost-effective strategies.",
+                "Built scalable data ingestion workflows with AWS Athena for semi-structured data querying, enhancing ad-hoc analytics capabilities and data exploration.",
+                "Implemented CI/CD workflows with GitHub Actions for automated deployment and testing of ETL pipelines, ensuring efficient schema evolution, access governance, and version control."
+            ],
+            "environment": [
+                "AWS Glue",
+                "Amazon S3",
+                "AWS Lake Formation",
+                "AWS Lambda",
+                "Redshift",
+                "AWS Macie",
+                "AWS Step Functions",
+                "AWS Glue Data Catalog",
+                "DMS",
+                "CloudWatch",
+                "CloudFormation",
+                "AWS Sage Maker",
+                "Apache Spark",
+                "PySpark",
+                "Apache Kafka",
+                "Spark Streaming",
+                "Oracle",
+                "Python",
+                "Flask",
+                "Airflow",
+                "GitHub Actions",
+                "Salesforce Sales Cloud",
+                "SAP",
+                "ServiceNow",
+                "Redis",
+                "Power BI",
+                "Amazon Quicksight"
+            ]
+        },
+        {
+            "role": "Data Engineer",
+            "client": "Cipla pharmaceuticals – Bengaluru, India",
+            "duration": "Jan 2019 – Dec 2020",
+            "responsibilities": [
+                "Architected a hybrid cloud platform using on-premise Hadoop (HDFS, Hive, Spark) and Azure services (Azure Data Lake Storage, Azure Synapse Analytics, Azure Data Factory, Azure Databricks) to process large-scale healthcare datasets, leveraging cloud scalability and on-premise data security.",
+                "Built secure, automated ETL pipelines using Azure Data Factory, integrating data from clinical systems, EHRs, and legacy databases into Azure SQL DB and Synapse for scalable analytics, ensuring data integrity and compliance.",
+                "Developed real-time streaming workflows using Apache Kafka, Azure Event Hubs, and Structured Streaming in Azure Databricks to process live clinical data and supply chain telemetry, enabling real-time insights and decision-making.",
+                "Modeled healthcare-specific data marts with dbt, deployed on Synapse, providing business insights on adverse events, patient adherence, and treatment outcomes, supporting data-driven healthcare improvements.",
+                "Migrated on-prem systems (Oracle, Teradata, Hadoop) to Azure cloud using Azure Database Migration Service and Terraform, ensuring zero data loss, maintaining performance parity, and reducing on-premise infrastructure costs.",
+                "Implemented data governance and compliance controls using Azure Purview, Role-Based Access Control (RBAC), Key Vault, and data encryption for data protection, adhering to industry regulations.",
+                "Automated deployment workflows via Azure DevOps, integrating PyTest for TDD, enabling consistent versioning, regression testing, and CI/CD for all data pipelines, improving development efficiency.",
+                "Utilized Snowflake and Redshift for data warehousing, optimizing data storage, processing, and query performance, leveraging columnar storage and distributed processing."
+            ],
+            "environment": [
+                "Azure Data Factory",
+                "Azure Synapse Analytics",
+                "Snowflake",
+                "Databricks",
+                "Delta Lake",
+                "Apache Spark",
+                "PySpark",
+                "Scala",
+                "SQL",
+                "Apache Kafka",
+                "Azure Event Hubs",
+                "Azure Stream Analytics",
+                "Power BI",
+                "Azure Cosmos DB",
+                "ADLS Gen2",
+                "HDFS",
+                "Hive",
+                "Pig",
+                "HBase",
+                "MapReduce",
+                "Sqoop",
+                "Flume",
+                "Zookeeper",
+                "Azure DevOps",
+                "Terraform",
+                "GitHub",
+                "Azure Monitor",
+                "Log Analytics",
+                "KQL",
+                "Azure Purview",
+                "Databricks Unity Catalog",
+                "RBAC",
+                "YAML",
+                "Azure Repos",
+                "Jira",
+                "Scrum",
+                "Agile"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University of Wisconsin-Milwaukee",
+            "degree": "Master's Degree in Information Technology",
+            "field": "Artificial Intelligence and Data Analytics",
+            "year": "YYYY"
+        }
+    ],
+    "certifications": [
+        "Azure Data Engineer –DP203",
+        "Azure AI Engineer-AI101",
+        "AWS Data Engineer Associate",
+        "Salesforce Developer-Associate"
+    ]
+}

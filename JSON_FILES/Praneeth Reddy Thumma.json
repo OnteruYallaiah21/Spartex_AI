@@ -1,0 +1,72 @@
+{
+    "name": "Praneeth Reddy Thumma",
+    "title": "ETL Developer & Data Analyst",
+    "contact": {
+        "email": "example@domain.com",
+        "phone": "+1(XXX)-XXX-XXXX",
+        "portfolio": "portfoliourl.com",
+        "linkedin": "linkedinurl.com"
+    },
+    "professional_summary": [
+        "Results-driven ETL Developer and Data Analyst with a passion for harnessing data to drive strategic decision-making and enhance operational efficiency, particularly in the healthcare domain. Skilled in building robust data integration and analysis platforms, leveraging cloud technologies, and applying advanced analytics to unlock valuable business insights.",
+        "Proficient in utilizing Azure services (Functions, SQL Database, Databricks, Data Factory), Python, SQL, and BI tools such as Power BI and Tableau to engineer ETL pipelines, perform complex data analysis, and deliver dynamic visualizations and reports. Committed to data quality excellence through serverless computing, automation, and stringent data governance practices."
+    ],
+    "technical_skills": {
+        "Programming Languages": ["Python", "C", "C++"],
+        "Databases": ["Oracle", "PostgreSQL", "MySQL", "SQL"],
+        "Cloud Environments": ["Azure", "AWS"],
+        "Big Data Technologies": ["Hadoop", "Spark", "Kafka"],
+        "ETL Tools": ["SSIS", "Talend", "Informatica PowerCenter"],
+        "BI Tools": ["Power BI", "Tableau"],
+        "Other Tools": ["Visual Studio", "Eclipse IDE", "SSRS", "SSMS", "Excel"]
+    },
+    "experience": [
+        {
+            "role": "ETL Developer",
+            "client": "Allruva Technology Services",
+            "duration": "June 2024 - Present",
+            "responsibilities": [
+                "Led the development of a cutting-edge platform for integrating and analyzing patient data from multiple healthcare providers, leveraging Azure Functions for process automation and data transformation.",
+                "Engineered robust ETL pipelines using Python, ensuring efficient data processing, security, and compliance.",
+                "Utilized Azure SQL Database for optimal data querying, management, and integrity, adhering to data governance standards.",
+                "Orchestrated seamless data integration with Azure Data Factory, enabling real-time analytics and reporting.",
+                "Conducted in-depth data analysis using Azure Databricks and PySpark to derive actionable insights for strategic decision-making.",
+                "Designed and deployed dynamic dashboards and reports in Power BI, providing comprehensive insights into healthcare trends, patient outcomes, and operational improvements."
+            ],
+            "environment": ["Azure", "Python", "SQL", "Power BI", "Healthcare"]
+        },
+        {
+            "role": "Data Analyst",
+            "client": "DXC Technology",
+            "duration": "April 2021 - Jan 2022",
+            "responsibilities": [
+                "Optimized data analytics frameworks, enhancing business intelligence reporting accuracy and speed, resulting in a 20% increase in overall operational efficiency.",
+                "Designed and executed complex SQL queries for efficient data extraction and analytics project preparation, reducing preparation time by 30%.",
+                "Utilized Python for advanced analytics, predictive modeling, and machine learning, identifying key trends that informed strategic initiatives and improved decision-making.",
+                "Directed legacy system data migration to a modern data warehouse architecture, ensuring data integrity and scalability, and aligning with data governance regulations.",
+                "Developed and deployed predictive models in Tableau, accurately forecasting customer behaviors and sales trends, contributing to a 15% increase in sales effectiveness.",
+                "Crafted and presented insightful data visualizations to stakeholders, enhancing data literacy and driving actionable business strategies."
+            ],
+            "environment": ["SQL", "Python", "Tableau", "Data Warehousing", "Business Intelligence"]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University of Missouri-Kansas City",
+            "degree": "Master of Science in Computer Science",
+            "field": "Computer Science",
+            "year": "2022-2023"
+        },
+        {
+            "institution": "KKR & KSR Institute of Technology and Sciences",
+            "degree": "Bachelor of Technology in Computer Science",
+            "field": "Computer Science",
+            "year": "2017-2021"
+        }
+    ],
+    "certifications": [
+        "Microsoft Azure Certified – Azure Data Engineer Associate",
+        "Certified Oracle Cloud Data Management Foundations Associate",
+        "Certified in C Programming from NPTEL"
+    ]
+}
