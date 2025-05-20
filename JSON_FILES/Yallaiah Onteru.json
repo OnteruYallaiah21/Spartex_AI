@@ -4,12 +4,11 @@
     "contact": {
         "email": "onteruyallaiah414@gmail.com",
         "phone": "+1(414)-275-0857",
-        "linkedin": "https://linkedin.com/in/yallaiah-onteru"
+        "portfolio": null,
+        "linkedin": "https://www.linkedin.com/in/yallaiah-onteru-41a485139/"
     },
     "professional_summary": [
-        "5.8+ years of experience as a Data Engineer specializing in Big Data technologies, Cloud Platforms (Azure & AWS), and data pipeline architecture, with a focus on the insurance and finance sectors.",
-        "Expertise in designing scalable ETL/ELT workflows and real-time streaming pipelines using Apache Spark (Scala, PySpark, Java), ADF, NiFi, Kafka, Kinesis, and Airflow.",
-        "Proficient in Azure services including Data Factory (ADF), ADLS, Synapse Analytics, Azure SQL DB, Cosmos DB, HDInsight, Azure Key Vault, Service Fabric, and Azure DevOps."
+        "Over 5.8 years of experience as a Data Engineer with expertise in Big Data technologies, Cloud Platforms (Azure, AWS), and data pipeline architecture. Skilled in designing scalable ETL/ELT workflows, real-time streaming pipelines, and data lakes. Proficient in Azure, AWS, and Hadoop ecosystems with a focus on insurance and finance sectors. Experience with ML model deployment and feature engineering. Agile project management and leadership skills."
     ],
     "technical_skills": {
         "Big Data Tools": [
@@ -38,8 +37,8 @@
             "Airflow"
         ],
         "Cloud Platforms": [
-            "AWS (S3, EMR, Glue, Lambda, Redshift, Kinesis, Athena, EC2, IAM, RDS, CloudWatch, Quicksight)",
-            "Azure (ADF, ADLS, Synapse, Databricks, Azure SQL DB, Cosmos DB, HDInsight, Key Vault, Service Fabric, DevOps)"
+            "AWS (S3, EMR, Glue, Lambda, Redshift, Neptune, SageMaker)",
+            "Azure (ADF, ADLS, Synapse, Databricks, Azure Boards)"
         ],
         "Databases": [
             "Oracle",
@@ -54,10 +53,7 @@
             "Dimensional modeling",
             "Star/Snowflake schema",
             "Data Lakes",
-            "Data Marts",
-            "MLOps",
-            "MLflow",
-            "Kubeflow"
+            "Data Marts"
         ],
         "DevOps & CI/CD": [
             "Git",
@@ -75,31 +71,13 @@
             "LLM",
             "M-Llib",
             "Scikit-learn",
-            "pandas",
+            "Pandas",
             "NumPy",
-            "pytorch",
+            "PyTorch",
             "LangChain",
             "RAG",
             "GPT",
-            "Prompt Engineering",
-            "AI/ML model development, deployment and optimization",
-            "TensorFlow",
-            "PyTorch",
-            "Scikit-learn",
-            "ML algorithms",
-            "supervised learning",
-            "unsupervised learning",
-            "reinforcement learning",
-            "data preprocessing",
-            "SQL",
-            "NoSQL databases",
-            "natural language processing",
-            "computer vision",
-            "recommendation systems",
-            "big data technologies",
-            "Spark",
-            "Hadoop",
-            "data visualization tools"
+            "Prompt Engineering"
         ],
         "Others": [
             "Data Governance",
@@ -115,16 +93,15 @@
             "client": "PNC Bank",
             "duration": "April 2024 – Present",
             "responsibilities": [
-                "Designed and implemented enterprise-grade ETL pipelines with Azure Databricks and Apache Spark, processing 10TB of insurance policy data daily for underwriting and risk analysis, utilizing advanced ML algorithms for enhanced data processing.",
-                "Led the architecture and development of a Data Mart in the CDP Layer, feeding data to 22 AI/ML models and enhancing real-time analytics for report generation, ensuring data-driven insights.",
-                "Implemented medallion architecture in Azure Databricks for PNC Bank’s CDP Layer, ensuring secure and efficient data processing, adhering to industry-standard security practices.",
-                "Migrated legacy ETL workflows from Hadoop to Azure cloud, optimizing performance, scalability, and reducing operational costs by 30%, leveraging cloud-native tools for seamless migration.",
-                "Built and managed Delta Lake tables, utilizing partitioning and Z-order optimization techniques for faster data processing and improved data accessibility, reducing query execution times.",
-                "Developed and deployed reusable data ingestion frameworks using Azure Data Factory, NiFi, and Python, integrating various data sources (including SQL Server, Oracle, and flat files) into Azure Data Lake and Synapse for centralized data storage.",
-                "Implemented real-time streaming pipelines using Kafka and Azure Databricks for policy updates, feeding downstream systems such as Azure Cosmos DB and SQL, enabling real-time data processing and analytics.",
-                "Integrated data quality frameworks in Azure Databricks using PySpark for schema validation, anomaly detection, and data integrity checks, ensuring data accuracy and consistency throughout the pipeline.",
-                "Automated CI/CD workflows with Azure DevOps for seamless data pipeline deployment and smooth updates across environments, reducing deployment times and improving efficiency.",
-                "Optimized query performance using AWS Redshift, achieving up to 30% faster query execution, leveraging columnar storage and parallel processing for efficient data retrieval."
+                "Designed and implemented enterprise-grade ETL pipelines with Azure Databricks and Apache Spark, processing 10TB of insurance policy data daily for underwriting and risk analysis.",
+                "Led the architecture and development of a Data Mart in the CDP Layer, integrating data from various sources and feeding 22 AI models for automated report generation and real-time analytics.",
+                "Implemented medallion architecture and Delta Lake tables in Azure Databricks for optimized data processing and storage.",
+                "Migrated legacy ETL workflows from Hadoop to Azure cloud, reducing costs and improving performance.",
+                "Built and deployed data ingestion frameworks using Azure Data Factory, NiFi, and Python, ensuring seamless data integration from SQL Server, Oracle, and flat files into Azure Data Lake and Synapse.",
+                "Developed real-time streaming pipelines using Kafka and Azure Databricks for policy updates, feeding downstream systems such as Azure Cosmos DB and SQL.",
+                "Integrated data quality frameworks in PySpark for schema validation, anomaly detection, and data integrity.",
+                "Automated CI/CD workflows with Azure DevOps for efficient pipeline deployment and updates.",
+                "Utilized Azure Boards for Agile project management, ensuring timely delivery of data modernization and AI model readiness."
             ],
             "environment": [
                 "Azure Databricks",
@@ -137,10 +114,6 @@
                 "Azure Key Vault",
                 "Azure Functions",
                 "Azure DevOps",
-                "Azure Monitor",
-                "Azure Log Analytics",
-                "Azure RBAC",
-                "Microsoft Fabric",
                 "Apache Spark",
                 "PySpark",
                 "Delta Lake",
@@ -149,11 +122,7 @@
                 "HDFS",
                 "Apache NiFi",
                 "SQL Server",
-                "SQL Server Management Studio(SSMS)",
                 "Kubernetes",
-                "Row-Level Security",
-                "Column Masking",
-                "Encryption",
                 "LangChain",
                 "OpenAI APIs",
                 "Python"
@@ -164,15 +133,12 @@
             "client": "Prudential",
             "duration": "Dec 2020 – Sept 2023",
             "responsibilities": [
-                "Designed and implemented scalable ETL pipelines using AWS Glue, Apache Spark (PySpark), and Python for financial and insurance data, enabling efficient data transformations for loan applications and insurance claims processing, adhering to GDPR compliance standards.",
-                "Managed a secure data lake architecture on Amazon S3, integrated with AWS Lake Formation and AWS Macie for access control and data security, ensuring data privacy and confidentiality.",
-                "Utilized AWS Lambda and Apache Kafka for serverless and real-time processing of insurance and loan data, optimizing performance and reducing latency.",
-                "Migrated legacy RDBMS data (Oracle) to AWS cloud services (S3 and Redshift) for centralized processing, improving query performance and reducing execution times by up to 30%, leveraging cloud-native features.",
-                "Developed REST APIs using Flask and Python to expose loan and insurance datasets for internal applications, enabling seamless data integration and access.",
-                "Integrated Salesforce, ServiceNow, and SAP data into the AWS data lake, providing unified customer analytics and real-time business insights, enhancing data-driven decision-making.",
-                "Performed NPV calculations and basic business financial modeling to support data-driven ROI decisions, ensuring cost-effective strategies.",
-                "Built scalable data ingestion workflows with AWS Athena for semi-structured data querying, enhancing ad-hoc analytics capabilities and data exploration.",
-                "Implemented CI/CD workflows with GitHub Actions for automated deployment and testing of ETL pipelines, ensuring efficient schema evolution, access governance, and version control."
+                "Designed and implemented scalable ETL pipelines using AWS Glue, Apache Spark (PySpark), and Python for financial and insurance data, enabling efficient loan application and claims processing.",
+                "Managed a secure data lake architecture on Amazon S3, ensuring compliance with GDPR and utilizing AWS Lambda and Apache Kafka for real-time, serverless data processing.",
+                "Migrated legacy RDBMS data (Oracle) to AWS cloud services (S3, Redshift), optimizing Redshift for faster query performance.",
+                "Developed REST APIs using Flask and Python to expose loan and insurance datasets, integrating Salesforce, ServiceNow, and SAP data into the AWS data lake for unified analytics and real-time insights.",
+                "Built scalable data ingestion workflows with AWS Athena for ad-hoc analytics on semi-structured data.",
+                "Implemented CI/CD workflows with GitHub Actions for automated testing and deployment of ETL pipelines, utilizing AWS Glue Data Catalog for efficient schema management and access governance."
             ],
             "environment": [
                 "AWS Glue",
@@ -186,7 +152,7 @@
                 "DMS",
                 "CloudWatch",
                 "CloudFormation",
-                "AWS Sage Maker",
+                "AWS SageMaker",
                 "Apache Spark",
                 "PySpark",
                 "Apache Kafka",
@@ -201,7 +167,7 @@
                 "ServiceNow",
                 "Redis",
                 "Power BI",
-                "Amazon Quicksight"
+                "Amazon QuickSight"
             ]
         },
         {
@@ -209,14 +175,13 @@
             "client": "Cipla pharmaceuticals – Bengaluru, India",
             "duration": "Jan 2019 – Dec 2020",
             "responsibilities": [
-                "Architected a hybrid cloud platform using on-premise Hadoop (HDFS, Hive, Spark) and Azure services (Azure Data Lake Storage, Azure Synapse Analytics, Azure Data Factory, Azure Databricks) to process large-scale healthcare datasets, leveraging cloud scalability and on-premise data security.",
-                "Built secure, automated ETL pipelines using Azure Data Factory, integrating data from clinical systems, EHRs, and legacy databases into Azure SQL DB and Synapse for scalable analytics, ensuring data integrity and compliance.",
-                "Developed real-time streaming workflows using Apache Kafka, Azure Event Hubs, and Structured Streaming in Azure Databricks to process live clinical data and supply chain telemetry, enabling real-time insights and decision-making.",
-                "Modeled healthcare-specific data marts with dbt, deployed on Synapse, providing business insights on adverse events, patient adherence, and treatment outcomes, supporting data-driven healthcare improvements.",
-                "Migrated on-prem systems (Oracle, Teradata, Hadoop) to Azure cloud using Azure Database Migration Service and Terraform, ensuring zero data loss, maintaining performance parity, and reducing on-premise infrastructure costs.",
-                "Implemented data governance and compliance controls using Azure Purview, Role-Based Access Control (RBAC), Key Vault, and data encryption for data protection, adhering to industry regulations.",
-                "Automated deployment workflows via Azure DevOps, integrating PyTest for TDD, enabling consistent versioning, regression testing, and CI/CD for all data pipelines, improving development efficiency.",
-                "Utilized Snowflake and Redshift for data warehousing, optimizing data storage, processing, and query performance, leveraging columnar storage and distributed processing."
+                "Architected a hybrid cloud platform using on-premise Hadoop (HDFS, Hive, Spark) and Azure services for processing large-scale healthcare datasets.",
+                "Built secure, automated ETL pipelines with Azure Data Factory, integrating clinical, operational, and patient data from various sources into Azure SQL DB and Synapse for analytics.",
+                "Developed real-time streaming workflows using Apache Kafka, Azure Event Hubs, and Structured Streaming in Azure Databricks for live clinical data processing.",
+                "Modeled healthcare-specific data marts with dbt, deployed on Synapse, providing insights on adverse events, patient adherence, and treatment outcomes.",
+                "Migrated on-prem systems (Oracle, Teradata, Hadoop) to Azure cloud using Azure Database Migration Service and Terraform, ensuring data integrity and performance.",
+                "Implemented data governance and compliance controls with Azure Purview, RBAC, Key Vault, and data encryption.",
+                "Automated deployment workflows via Azure DevOps, integrating PyTest for TDD and CI/CD."
             ],
             "environment": [
                 "Azure Data Factory",
@@ -262,9 +227,9 @@
     "education": [
         {
             "institution": "University of Wisconsin-Milwaukee",
-            "degree": "Master's Degree in Information Technology",
-            "field": "Artificial Intelligence and Data Analytics",
-            "year": "YYYY"
+            "degree": "Master's Degree",
+            "field": "Information Technology with a concentration in Artificial Intelligence and Data Analytics",
+            "year": null
         }
     ],
     "certifications": [
