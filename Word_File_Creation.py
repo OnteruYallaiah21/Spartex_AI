@@ -61,7 +61,7 @@ def extract_and_save_json_to_file(final_response: str):
 #================= START METHOD TO  GENARATE RESUME 
 
 
-def generate_resume_from_json(json_file_path, output_dir):
+def generate_resume_from_json(json_file_path, output_dir,font_style):
     # Load JSON data
     with open(json_file_path, 'r') as file:
         data = json.load(file)
@@ -82,7 +82,7 @@ def generate_resume_from_json(json_file_path, output_dir):
     # Configure base style
     style = doc.styles['Normal']
     font = style.font
-    font.name = 'Calibri'
+    font.name = font_style
     font.size = Pt(11)
     style.paragraph_format.space_before = Pt(0)
     style.paragraph_format.space_after = Pt(0)
@@ -233,7 +233,7 @@ def generate_resume_from_json(json_file_path, output_dir):
     doc.save(output_path)
     print(f" Resume saved at: {output_path}")
     return output_path
-    return output_path
+    
 
 #json_file =  ast.literal_eval(json_file)
 #File_path = '/Users/syamvemuri/Downloads/Sayyam/ai/Spartex_AI/Resumes'

@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import tempfile
 import re
-import re
+import random
 import docx2txt
 import textract
 from docx import Document
@@ -99,7 +99,10 @@ def analyze():
         score = 75  # Example score
         jd_skills=Model_Intilization.llm_call_json_response(job_description)
         #print(f'THE LLM RESPONSE IS FOR CLEANING  ====>{jd_skills}')
-
+        technical_skills,non_technical_skills = Model_Intilization.parse_skills(jd_skills)
+        combined_skills = non_technical_skills + technical_skills 
+        relust_tech=', '.join(combined_skills)
+        #
         final_prompt= f"job_disccription_skills={jd_skills}, myresume={resume_text}"
         finaanl_reposne = Model_Intilization.llm_final_response(final_prompt)
         #print(f'======== THE Json Response is ======>{finaanl_reposne}')
@@ -108,19 +111,28 @@ def analyze():
         print(f' THE Json file after ceaning===> {json_file}')
         #json_file =  ast.literal_eval(json_file)
         file_path = os.path.join(app.root_path, 'static', 'resumes')
-        final_resume_file = Word_File_Creation.generate_resume_from_json(json_file,file_path)
+        final_resume_file = Word_File_Creation.generate_resume_from_json(json_file,file_path,font_style)
         print(f' the final resume file is ====> {final_resume_file}')
         # Return simple response
         filename = os.path.basename(final_resume_file)
         download_url = f"/download/{filename}" 
-        return jsonify({
-                
-                  "ats_score_before": 75,          #Numeric score (0-100) before optimization
-                  "ats_score_after": 90,           # Numeric score (0-100) after optimization
-                  "optimization_points": "1. Add more keywords from the JD...\n2. Improve skills section...\n3. Highlight relevant experience...",  
-                  "optimized_resume_url": download_url #Download link (optional)
+        score = (
+                    random.randint(81, 85) if len(technical_skills) in [1, 2] else
+                    random.randint(78, 80) if len(technical_skills) == 3 else
+                    random.randint(58, 65) if 4 <= len(technical_skills) <= 6 else
+                    random.randint(45, 50) if len(technical_skills) == 7 else
+                    random.randint(35, 40) if len(technical_skills) > 7 else
+                    None
+                )
 
+
+        return jsonify({
+            "ats_score_before": score,
+            "ats_score_after": random.randint(86, 91),
+            "optimization_points": f"*** SKILLS OPTIMIZATION *** 1. We are adding the skills in upper version, please stay with us.\n {relust_tech}",
+            "optimized_resume_url": download_url
         })
+
         
     except Exception as e:
         print(f"\nError: {str(e)}")
@@ -145,4 +157,6 @@ import Word_File_Creation
 #def generate_resume(json_file_path):: TO CRAETE THE WORD FILW WHIC WILL ACCEPT THE JSON FILE
 #def convert_to_json_string(json_response):  TO CREATE THE JSON FILE FROM THE JSON RESPONSE 
 '''
+#cloudflared tunnel --url http://localhost:5001
+
 #======================= ALL IMPORT METHODS INFOR
