@@ -1,4 +1,5 @@
 import ollama
+
 def ollma_bullet_points(tech_skills, non_tech_skills):
     user_prompt = f"here I am going to give {tech_skills}. generate bullet points?"
 

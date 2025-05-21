@@ -1,6 +1,8 @@
 from docx import Document
 from docx.shared import Pt, Inches, RGBColor
-from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_PARAGRAPH_ALIGNMENT
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_PARAGRAPH_ALIGNMENT, WD_BREAK
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 import json
 import io
 import re
@@ -27,6 +29,7 @@ def extract_and_save_json_to_file(final_response: str):
     Returns:
         str: File path if saved successfully, else None
     """
+    print(f"Final response received from the word file method====>: {final_response}")
     try:
         # Extract the JSON block using regex
         match = re.search(r'JSON\s*=\s*(\{.*?\})(?=\s*Missing_|$)', final_response, re.DOTALL)
@@ -61,7 +64,7 @@ def extract_and_save_json_to_file(final_response: str):
 #================= START METHOD TO  GENARATE RESUME 
 
 
-def generate_resume_from_json(json_file_path, output_dir,font_style):
+def generate_resume_from_json(json_file_path, output_dir, font_style):
     # Load JSON data
     with open(json_file_path, 'r') as file:
         data = json.load(file)
@@ -99,14 +102,60 @@ def generate_resume_from_json(json_file_path, output_dir,font_style):
             run.font.color.rgb = RGBColor(*color)
         return p
 
-    def add_section_heading(text):
-        p = doc.add_paragraph()
-        p.paragraph_format.space_before = Pt(6)
-        run = p.add_run(text)
-        run.font.size = Pt(12)
-        run.bold = True
-        return p
+  
 
+    def add_section_heading(text):
+        # Create a single-cell table for the heading
+        table = doc.add_table(rows=1, cols=1)
+        table.style = 'Table Grid'
+        table.autofit = False
+        
+        # MODIFIED: Slightly increase table width to extend line
+        table.columns[0].width = Inches(6.25)  # Increased from 6.0 to 6.25 inches
+        
+        # Add the heading text
+        cell = table.cell(0, 0)
+        p = cell.paragraphs[0]
+        run = p.add_run(text)
+        run.bold = True
+        run.font.size = Pt(12)
+        
+        # Remove all borders except bottom
+        tc = cell._tc
+        tcPr = tc.get_or_add_tcPr()
+        
+        # Create border elements
+        tcBorders = OxmlElement('w:tcBorders')
+        
+        # Remove top border
+        top = OxmlElement('w:top')
+        top.set(qn('w:val'), 'nil')
+        tcBorders.append(top)
+        
+        # Remove left border
+        left = OxmlElement('w:left')
+        left.set(qn('w:val'), 'nil')
+        tcBorders.append(left)
+        
+        # Remove right border
+        right = OxmlElement('w:right')
+        right.set(qn('w:val'), 'nil')
+        tcBorders.append(right)
+        
+        # Configure bottom border (the line we want)
+        bottom = OxmlElement('w:bottom')
+        bottom.set(qn('w:val'), 'single')  # Single line
+        bottom.set(qn('w:sz'), '6')        # MODIFIED: Increased thickness from 4 to 6 (0.75pt)
+        bottom.set(qn('w:space'), '0')     # No spacing
+        bottom.set(qn('w:color'), '000000') # Black color
+        tcBorders.append(bottom)
+        
+        tcPr.append(tcBorders)
+        
+        # Adjust spacing
+        p.paragraph_format.space_after = Pt(6)
+        
+        return table
     def add_justified_paragraph(text=None, bold=False, color=None):
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
@@ -139,7 +188,7 @@ def generate_resume_from_json(json_file_path, output_dir,font_style):
         contact_parts.append('Portfolio')
 
     contact_text = " | ".join(contact_parts)
-    add_centered_paragraph(contact_text, size=10)
+    add_centered_paragraph(contact_text, size=12)
 
     # --- Professional Summary ---
     if 'professional_summary' in data and data['professional_summary']:
@@ -231,12 +280,5 @@ def generate_resume_from_json(json_file_path, output_dir,font_style):
 
     os.makedirs(output_dir, exist_ok=True)
     doc.save(output_path)
-    print(f" Resume saved at: {output_path}")
+    print(f"Resume saved at: {output_path}")
     return output_path
-    
-
-#json_file =  ast.literal_eval(json_file)
-#File_path = '/Users/syamvemuri/Downloads/Sayyam/ai/Spartex_AI/Resumes'
-#final_resume_file = generate_resume(json_file,file_path)
-#print(f' the final resume file is ====> {final_resume_file}')
-# Word_File_Creation.py

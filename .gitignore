@@ -2,6 +2,8 @@
 uploads/
 media/
 user_data/
+JSON_FILES/
+static/
 
 # Ignore all PDFs and DOCX files across project
 *.pdf
