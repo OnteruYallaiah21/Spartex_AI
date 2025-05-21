@@ -1,0 +1,154 @@
+{
+    "name": "Siva Punna Rao Mandadi",
+    "title": "Network Engineer",
+    "contact": {
+        "email": "sivamandadi02@gmail.com",
+        "phone": "+1 (971) 206-4464",
+        "portfolio": "linkedin.com/in/siva",
+        "linkedin": "linkedin.com/in/siva"
+    },
+    "professional_summary": [
+        "Network Engineer with 4+ years of experience designing, implementing, and optimizing network infrastructure across enterprise, academic, and data center environments. Expertise in routing protocols (OSPF, BGP, EIGRP), VPN configurations, and firewall security with Cisco, Palo Alto, and Juniper technologies. Proficient in network automation and scripting using Python, Ansible, and Terraform, ensuring efficient provisioning and reduced configuration errors. Well-versed in cloud networking with AWS and Azure, and skilled in Linux systems administration and network monitoring tools such as SolarWinds and Wireshark. Experienced in managing large-scale networks, ensuring security, performance, and reliability."
+    ],
+    "technical_skills": {
+        "Networking Equipment": [
+            "Cisco Routers",
+            "Switches",
+            "Wireless Access Points",
+            "LAN",
+            "WAN",
+            "Firewalls (Cisco ASA, FMC, Palo Alto, Juniper MAG)",
+            "Nexus 7ks",
+            "Juniper IC Infranet Controllers (MAG-SM360, MAG-4610)"
+        ],
+        "Network Monitoring & Management": [
+            "SolarWinds",
+            "NetFlow",
+            "Nagios",
+            "SNMP",
+            "Nmap",
+            "PRTG",
+            "DNAC",
+            "Network Performance Optimization"
+        ],
+        "Automation & Scripting": [
+            "Python",
+            "Bash",
+            "Ansible",
+            "Terraform",
+            "Powershell",
+            "CI/CD Pipelines",
+            "Configuration Management"
+        ],
+        "Cloud Platforms": [
+            "AWS",
+            "Microsoft Azure",
+            "Cloud Networking",
+            "SLA Management"
+        ],
+        "Protocols & Technologies": [
+            "TCP/IP",
+            "IPSEC",
+            "SSL",
+            "UDP",
+            "BGP",
+            "OSPF",
+            "EIGRP",
+            "VLAN",
+            "VPN",
+            "vPC",
+            "NAT",
+            "DHCP",
+            "DNS",
+            "IPv4/IPv6",
+            "QoS",
+            "VoIP"
+        ],
+        "Security & Access Control": [
+            "ACLs",
+            "NAT",
+            "PAT",
+            "GRE Tunnel",
+            "IDS/IPS",
+            "802.1x",
+            "IPS",
+            "RADIUS",
+            "TACACS+",
+            "Security NAT",
+            "Threat Prevention",
+            "URL Filtering"
+        ],
+        "Other": [
+            "Git",
+            "Troubleshooting",
+            "Technical Documentation",
+            "Change Management",
+            "Hardware",
+            "Software",
+            "Strategic Choices",
+            "Strategy and Roadmaps"
+        ]
+    },
+    "experience": [
+        {
+            "role": "Network Engineer",
+            "client": "Saint Louis University",
+            "duration": "Aug 2023 - Present",
+            "responsibilities": [
+                "Physically assembled and configured firewalls, IDS/IPS, and Nexus 7ks within the data center, ensuring AAA security with Juniper IC Infranet controllers MAG-SM360 and MAG-4610.",
+                "Configured and managed VLANs, QoS, VoIP, and advanced access lists using Cisco IOS ACL, enhancing network segmentation and data security.",
+                "Developed network automation scripts to streamline switch provisioning and monitoring, resulting in a 30% reduction in setup time.",
+                "Optimized wireless network coverage across academic and administrative buildings, improving signal quality and connectivity.",
+                "Maintained detailed documentation of network configurations, change management procedures, and troubleshooting guides."
+            ],
+            "environment": ["Cisco Routers", "Switches", "Firewalls", "SolarWinds", "Python", "Ansible", "AWS", "Linux"]
+        },
+        {
+            "role": "Network Engineer",
+            "client": "Cognizant Technology Solutions",
+            "duration": "Nov 2021 - Aug 2023",
+            "responsibilities": [
+                "Designed and deployed secure LAN, WAN, and VPN solutions to ensure multi-site connectivity for enterprise clients.",
+                "Administered Clear Pass Policy Manager (CCPM) for efficient management of user devices, TACACS, and RADIUS logs.",
+                "Configured and managed Cisco routers, switches, and firewalls to enhance network reliability and security, utilizing Palo Alto Network firewalls.",
+                "Developed and implemented firewall policies, ACLs, and access controls to safeguard internal systems and data.",
+                "Automated switch configurations and daily backups using Python and Ansible, saving 4+ hours of manual work weekly.",
+                "Translated business requirements into technical specifications, ensuring alignment with architecture and security standards.",
+                "Created feasible plans and estimates for network implementations, ensuring continuity of IT service delivery."
+            ],
+            "environment": ["Palo Alto", "Cisco", "Clear Pass Policy Manager", "Python", "Ansible", "AWS Certified", "Azure"]
+        },
+        {
+            "role": "Network Engineer Intern",
+            "client": "Cognizant Technology Solutions",
+            "duration": "June 2021 - Nov 2021",
+            "responsibilities": [
+                "Assisted senior engineers in configuring Cisco routers, switches, and firewalls, gaining hands-on experience in network technologies.",
+                "Supported basic network troubleshooting and resolved internal connectivity issues in test environments.",
+                "Contributed to VLAN setup, IP addressing schemes, and test case execution for client-simulated environments.",
+                "Utilized Wireshark and SolarWinds for traffic analysis and reporting network anomalies.",
+                "Documented device configurations, cable layouts, and network diagrams to support deployment projects.",
+                "Participated in daily stand-ups and change meetings to collaborate with cross-functional teams and learn best practices."
+            ],
+            "environment": ["Cisco", "Wireshark", "SolarWinds"]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Saint Louis University, Saint Louis, MO, USA",
+            "degree": "Master in Computer and Information Systems",
+            "field": "Computer Science",
+            "year": "YYYY"
+        },
+        {
+            "institution": "Jawaharlal Nehru Technological University, Kakinada, India",
+            "degree": "Bachelor of Computer Science",
+            "field": "Computer Science",
+            "year": "YYYY"
+        }
+    ],
+    "certifications": [
+        "Cisco Certified Network Associate (CCNA)",
+        "AWS Certified Solutions Architect - Associate"
+    ]
+}

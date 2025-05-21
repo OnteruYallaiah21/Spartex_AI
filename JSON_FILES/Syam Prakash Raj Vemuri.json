@@ -1,0 +1,116 @@
+{
+    "name": "Syam Prakash Raj Vemuri",
+    "title": "DevOps Engineer",
+    "contact": {
+        "email": "svemuri1996@gmail.com",
+        "phone": "+1-414-293-2279",
+        "portfolio": null,
+        "linkedin": "linkedin.com/in/syamprakashrajvemuri"
+    },
+    "professional_summary": [
+        "4+ years of results-driven IT experience in Cloud (Azure, AWS) and DevOps, delivering scalable and fault-tolerant solutions.",
+        "Expertise in Azure services (CDN, ExpressRoute, DNS, VNet, VPN Gateway) and AWS solutions (EC2, S3, EBS, Route 53, CloudFormation).",
+        "Proficient in infrastructure automation using Terraform, Ansible Playbooks (Python), and CI/CD tools (Azure DevOps, Jenkins, Bamboo).",
+        "Experience with Azure AD, Security Center, and performance monitoring tools like Application Insights, CloudTrail, and Redis Cache.",
+        "Designed scalable applications using Azure Logic Apps, Stream Analytics, and managed storage solutions (Azure Data Lake, Blob).",
+        "Well-versed in Linux/Windows administration, container orchestration (Kubernetes, AKS), and source control (GitHub, SVN).",
+        "Implemented Agile/Scrum methodologies, facilitated ceremonies, and reported metrics using JIRA.",
+        "Strong communication skills, self-starter, and able to collaborate effectively in dynamic environments.",
+        "Certified AWS Certified DevOps Engineer - Professional and Microsoft Certified DevOps Engineer - Expert.",
+        "Master's in Information Technology Management from the University of Wisconsin, Milwaukee (GPA: 3.34)."
+    ],
+    "technical_skills": {
+        "Cloud Platforms & Services": ["Azure", "AWS", "GCP", "CDN", "ExpressRoute", "DNS", "VNet", "VPN Gateway", "SQL", "Web/Mobile Apps", "PaaS", "EC2", "S3", "EBS", "EFS", "Route 53", "CloudFormation"],
+        "CI/CD & Automation": ["Terraform", "Azure DevOps", "YAML", "Jenkins", "Bamboo", "GitHub Actions", "CI/CD Pipelines", "Ansible", "Chef", "Python", "PowerShell", "Bash"],
+        "Containerization & Orchestration": ["Docker", "Kubernetes", "Azure Kubernetes Service (AKS)", "Helm Charts", "OpenShift", "Cloud Foundry"],
+        "Scripting & Programming": ["Python", "Java", "Linux", "PySpark", "Bash", "Shell Scripting", "PowerShell", "SQL", "C++"],
+        "Version Control & Collaboration": ["Git", "Bitbucket", "GitHub", "JIRA", "Confluence"],
+        "Monitoring & Logging": ["Prometheus", "Grafana", "Datadog", "New Relic", "Azure Monitor", "CloudWatch", "Elastic Stack"],
+        "Networking & Security": ["VNets", "NSGs", "Firewall Manager", "Private Endpoints", "VPC", "IAM", "VPN Gateway", "Azure AD", "Azure RBAC", "Azure Security Center", "Security Groups", "Network ACLs"],
+        "Virtualization & Backup": ["Hyper-V", "VirtualBox", "Azure Site Recovery", "AWS Backup", "VMware"],
+        "Cloud Cost Management": ["Azure Cost Management", "GCP Billing", "AWS Cost Explorer"]
+    },
+    "experience": [
+        {
+            "role": "DevOps Engineer",
+            "client": "Kohl's Corporation",
+            "duration": "Jul 2024 - Present",
+            "responsibilities": [
+                "Led the design and implementation of migrating on-premises retail applications to Azure Cloud using ARM and Terraform templates, ensuring smooth resource provisioning.",
+                "Deployed Azure IaaS Virtual Machines (VMs) and PaaS Cloud services within secure VNets and subnets, adhering to scalability and security best practices.",
+                "Configured and managed Azure Automation scripts, utilizing Azure services such as Compute, Web & Mobile, Azure Data Lake, Blobs, and HDInsight Clusters effectively.",
+                "Enhanced operational efficiency by writing PowerShell scripts for automated reporting and environment management.",
+                "Developed and maintained CI/CD pipelines using Azure DevOps, enabling zero-downtime deployments and high customer satisfaction.",
+                "Implemented AKS (Azure Kubernetes Services) for container orchestration, improving application scaling and performance.",
+                "Secured microservices-based applications with Nginx reverse proxy and SSL/TLS encryption, ensuring a robust security posture.",
+                "Integrated on-prem systems with Azure using Azure AD Connect, ADFS authentication, and ADFS installation, ensuring seamless connectivity.",
+                "Hardened VMs using disk encryption with KEK keys, maintaining secure access to resources and compliance with security standards.",
+                "Designed and executed Azure Disaster Recovery strategies, including Recovery Vault and Azure Backups, with automated disaster recovery tasks using PowerShell."
+            ],
+            "environment": ["Azure", "ARM Templates", "Terraform", "PowerShell", "Azure DevOps", "AKS", "Nginx", "Azure AD Connect", "AFDS", "VMs", "Azure Data Lake", "HDInsight Clusters", "Kubernetes", "SSL/TLS"]
+        },
+        {
+            "role": "DevOps Engineer",
+            "client": "Epic Systems Corporation",
+            "duration": "Sep 2023 - Jun 2024",
+            "responsibilities": [
+                "Established a Continuous Delivery pipeline using Docker, GitHub, and AWS, ensuring automated deployment and testing of healthcare applications.",
+                "Configured instances behind Elastic Load Balancer (ELB) in AWS for high availability and fault tolerance, meeting business continuity requirements.",
+                "Managed S3 Buckets for secure storage and performed data validation and quality checks using Python, ensuring data integrity.",
+                "Installed and automated Ansible on AWS EC2 instances, utilizing AWS CLI, Python, and CloudFormation templates for seamless cloud deployment.",
+                "Leveraged AWS Lambda to execute code in response to S3 bucket data changes, enabling dynamic and event-driven functionality.",
+                "Optimized cost management by writing Ansible Playbooks for auto-start/stop of AWS resources, triggered by Jenkins for efficient resource utilization.",
+                "Conducted data profiling, mapping, and integration from multiple sources into AWS S3, RDS, and Redshift, ensuring streamlined data management and analysis.",
+                "Configured and secured Linux-based environments for high-performance healthcare applications, maintaining reliability and compliance.",
+                "Automated AWS environment creation using CloudFormation, AWS CLI, and Shell/Python scripts, providing rapid and consistent infrastructure deployment.",
+                "Utilized Docker for server virtualization, built Docker images, and employed version control to achieve Continuous Delivery goals in a scalable environment.",
+                "Executed 'lift and shift' migrations using AWS Server Migration Service (SMS) and database migrations with AWS Database Migration Service (DMS), ensuring smooth data transitions."
+            ],
+            "environment": ["Docker", "GitHub", "AWS", "ELB", "S3", "RDS", "Redshift", "Ansible", "AWS Lambda", "Jenkins", "Python", "CloudFormation", "AWS CLI", "Shell/Python Scripts", "AWS SMS", "AWS DMS"]
+        },
+        {
+            "role": "DevOps Engineer",
+            "client": "Chewy",
+            "duration": "Nov 2021 - Dec 2022",
+            "responsibilities": [
+                "Designed and implemented an Azure Data Factory-based Ingestion Framework with Azure SQL Database and Data Warehouse, enabling streamlined data processing and storage.",
+                "Automated infrastructure using Terraform (resource versioning, Azure modules) and Ansible (manifests, roles) for efficient Azure VM/server management and configuration automation.",
+                "Built Jenkins CI/CD pipelines using Python and shell scripts for package distribution and deployment to Tomcat, ensuring consistent and repeatable deployments.",
+                "Managed Docker ecosystems, including Slave Nodes, Swarm orchestration, and Registry/Hub image management, facilitating containerized application development.",
+                "Orchestrated containerized environments with Kubernetes, OpenShift, and Cloud Foundry, ensuring scalable and resilient application deployments.",
+                "Automated server builds, containerization, and deployments, while developing JIRA workflows to streamline development processes and improve efficiency.",
+                "Utilized Kubernetes Helm charts for repeatable and standardized deployments across the organization."
+            ],
+            "environment": ["Azure Data Factory", "Azure SQL Database", "Azure Data Warehouse", "Terraform", "Ansible", "Jenkins", "Python", "Shell Scripts", "Docker", "Kubernetes", "OpenShift", "Cloud Foundry", "JIRA", "Helm Charts"]
+        },
+        {
+            "role": "Cloud Engineer",
+            "client": "Goldman Sachs",
+            "duration": "Jun 2020 - Oct 2021",
+            "responsibilities": [
+                "Automated cloud infrastructure deployments on AWS using Code Pipeline and CloudFormation (JSON templates), designing custom VPCs, subnets, and database solutions for scalable web applications.",
+                "Built and maintained CI/CD pipelines with Jenkins, integrating AWS Lambda for artifact storage in S3, ensuring reliable and secure deployments.",
+                "Deployed microservices to Docker registries, leveraging Bitbucket and Gradle for source control and build automation, adhering to development best practices.",
+                "Configured AWS Route 53 for multi-region traffic routing, enhancing user experience and application performance.",
+                "Secured cloud environments using Security Groups, Network ACLs, and Linux server hardening practices, maintaining compliance with security standards.",
+                "Orchestrated container management using Kubernetes clusters and AWS ECS, providing consistent and isolated test/dev environments.",
+                "Constructed Docker images for middleware configurations, enabling rapid and reproducible deployments.",
+                "Monitored Kubernetes clusters using Prometheus and Grafana, ensuring robust cloud security and operational performance, and identifying areas for improvement.",
+                "Secured the AWS root account and enforced post-provisioning security best practices to maintain compliance and mitigate risks."
+            ],
+            "environment": ["AWS", "Code Pipeline", "CloudFormation", "VPC", "Subnets", "AWS Lambda", "S3", "Jenkins", "Docker", "Bitbucket", "Gradle", "AWS Route 53", "Security Groups", "Network ACLs", "Kubernetes", "AWS ECS", "Prometheus", "Grafana"]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University of Wisconsin, Milwaukee, USA",
+            "degree": "Master's in Information Technology Management",
+            "field": null,
+            "year": "2023 - 2024"
+        }
+    ],
+    "certifications": [
+        "AWS Certified DevOps Engineer - Professional",
+        "Microsoft Certified DevOps Engineer - Expert"
+    ]
+}

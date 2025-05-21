@@ -224,7 +224,7 @@ def llm_final_response(final_prompt):
                     Only enhance or append bullet points. Finally, output the optimized resume in 
                     and also return dont not print any missing technical skills and non technical skills
                     this exact JSON format in valiable, becasue I need to send the exact the json reposne to another method:
-                    and for "professional_summary" genarate more optimised single point 
+                    and for "professional_summary" genarate 9 to 10 summary points  to increase and ats score, and that point should be aligned with jd as wel as resume projects i want  ats score more then 95+ after changes 
                                 JSON=
                                 {
                                 "name": "[Full Name]",
@@ -236,7 +236,17 @@ def llm_final_response(final_prompt):
                                     "linkedin": "[URL]"
                                 },
                                 "professional_summary": [
-                                    "[Bullet Point 1]"
+                                    "[Bullet Point 1]",
+                                    "[Bullet Point 2]",
+                                    "[Bullet Point 3]",
+                                    "[Bullet Point 4]",
+                                    "[Bullet Point 5]",
+                                    "[Bullet Point 6]",
+                                    "[Bullet Point 7]"
+                                    "[Bullet Point 8]",
+                                    "[Bullet Point 9]",
+                                    "[Bullet Point 10]"
+
                                 ],
                                 "technical_skills": {
                                     "[Category 1]": ["Skill1", "Skill2"],

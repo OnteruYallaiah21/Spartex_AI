@@ -129,7 +129,7 @@ def analyze():
         return jsonify({
             "ats_score_before": score,
             "ats_score_after": random.randint(86, 91),
-            "optimization_points": f"*** SKILLS OPTIMIZATION *** 1. We are adding the skills in upper version, please stay with us.\n {relust_tech}",
+            "optimization_points": f"*** SKILLS OPTIMIZATION *** \n ****The ats score is in developmenmt phase never mind.......!**** \n 1. We are adding the skills in upper version, please stay with us.\n {relust_tech}",
             "optimized_resume_url": download_url
         })
 
