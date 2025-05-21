@@ -1,2 +1,34 @@
+# Ignore uploaded files (e.g., resumes, documents)
+uploads/
+media/
+user_data/
+
+# Ignore all PDFs and DOCX files across project
+*.pdf
+*.docx
+
+# Ignore temporary or system files
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Python-specific
+__pycache__/
+*.py[cod]
 .env
-__pycache__
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore Flask/MacOS debug files
+instance/
+*.sqlite3
+
+# Ignore config/API key files (if applicable)
+config.yaml
+api_keys.json

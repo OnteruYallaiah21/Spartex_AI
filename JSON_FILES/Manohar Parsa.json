@@ -1,0 +1,124 @@
+{
+    "name": "Manohar Parsa",
+    "title": "CSV Engineer",
+    "contact": {
+        "email": "manoharparsa71@gmail.com",
+        "phone": "414-639-1125",
+        "portfolio": null,
+        "linkedin": null
+    },
+    "professional_summary": [
+        "8+ years experienced CSV Engineer with a strong pharmaceutical and healthcare validation background.",
+        "Proficient in Computer System Validation (CSV), ensuring lab systems, equipment, and software compliance with FDA regulations, GxP, and 21 CFR Part 11.",
+        "Skilled in developing and executing IQ/OQ/PQ protocols, risk assessments, and validation summary reports, demonstrating a strong understanding of GAMP 4 & 5 frameworks.",
+        "Proven track record in leading quality reviews and remediation efforts, ensuring documentation accuracy and audit readiness for pharmaceutical projects.",
+        "Conducted Factory Acceptance Testing (FAT) and supported qualification of packaging lines for various dosage forms, maintaining regulatory compliance.",
+        "Performed Data Integrity assessments, ensuring Electronic Records and Electronic Signatures (ERES) compliance with FDA guidelines and ALCOA+ principles.",
+        "Collaborated effectively with cross-functional teams (QA, IT, Engineering) to align validation scope with regulatory and business requirements.",
+        "Authored and maintained comprehensive validation documentation, including SOPs, Functional Requirements, and security protocols for validated systems.",
+        "Provided validation support for biotech environments, ensuring equipment qualification and compliance with internal and external audit requirements.",
+        "Extensive experience in testing, reviewing, and ensuring system security, user access, and audit trails for lab equipment and software platforms."
+    ],
+    "technical_skills": {
+        "Software & Tools": [
+            "Microsoft Office Suite (Word, Excel, Visio, Outlook)",
+            "LIMS",
+            "TrackWise",
+            "Clean-In-Place (CIP) Systems",
+            "PLC/HMI-Based Automated Systems",
+            "Electronic Records and Electronic Signatures (ERES)",
+            "FDA Compliance Software",
+            "GxP Compliance Software"
+        ],
+        "Methodologies & Frameworks": [
+            "Computer System Validation (CSV)",
+            "GAMP 4 & 5",
+            "Positive and Negative Testing",
+            "Failure Mode and Effect Analysis (FMEA)",
+            "Factory Acceptance Testing (FAT)",
+            "IQ/OQ/PQ Protocol Development and Execution",
+            "Risk Assessment and Mitigation",
+            "Data Integrity Assessments",
+            "Audit Trail Reviews"
+        ]
+    },
+    "experience": [
+        {
+            "role": "CSV Engineer",
+            "client": "Johnson & Johnson, Raritan, NJ",
+            "duration": "December 2022 - Present",
+            "responsibilities": [
+                "Created and reviewed CSV deliverables: URS, Risk Assessments, IQ/OQ/PQ Qualification Protocols, ensuring 21 CFR Part 11, GxP, and FDA compliance.",
+                "Performed Data Integrity assessments for ERES, ensuring compliance with FDA guidelines and data integrity principles (ALCOA+).",
+                "Validated lab equipment and enterprise systems using GAMP 5, ensuring compliance with SOPs and regulatory standards.",
+                "Standardized validation templates and documentation processes, improving consistency and reducing review times.",
+                "Collaborated with cross-functional teams to align validation scope with regulatory and business needs.",
+                "Developed comprehensive checklists for lab equipment and software systems to ensure compliance with 21 CFR Part 11.",
+                "Authored and maintained SOPs, Functional Requirements, Risk Assessments, and security documentation for validated systems.",
+                "Provided validation support for biotech environments, including protocol execution and technical documentation.",
+                "Assessed regulatory risk and data integrity posture of computerized systems for internal and external audits.",
+                "Led qualification of complex systems: bioreactors, chromatography skids, EnVision Plate Readers, and T5 Titrators.",
+                "Ensured system security, user access control, and comprehensive audit trails by reviewing application-level configurations."
+            ],
+            "environment": ["21 CFR Part 11", "GxP", "FDA Compliance", "GAMP 5", "ERES", "CIP Systems", "PLC/HMI Automation", "SOP Compliance"]
+        },
+        {
+            "role": "Validation Engineer",
+            "client": "Novo Nordisk, NY",
+            "duration": "July 2019 - November 2022",
+            "responsibilities": [
+                "Conducted Positive and Negative Testing for application functionality, accuracy, and reliability.",
+                "Created and executed IQ, OQ, and PQ protocols, ensuring compliance with FDA regulations.",
+                "Validated LIMS and TrackWise systems, ensuring full functionality and compliance.",
+                "Provided input on Validation Rationale and cGMP training requirements for the department.",
+                "Led quality reviews of CSV deliverables (validation strategy, protocols, traceability matrices) as part of a Consent Decree remediation project.",
+                "Tested end-to-end workflows to ensure business requirements, data integrity, and validity were met.",
+                "Developed IQ/OQ/PQ and MSA protocols, focusing on inspection, testing, and statistical methods for process stability.",
+                "Prepared compliance reports evaluating GMP, GCP, and GLP status within the organization.",
+                "Closed CAPAs related to CSV for Automation and R&D teams, ensuring compliance and process improvements.",
+                "Reviewed validation protocols to ensure adherence to company and regulatory standards.",
+                "Participated in SOX, internal, and external audits to ensure system compliance.",
+                "Validated computerized laboratory equipment following GAMP 4 & 5 guidelines for operational standards.",
+                "Performed Factory Acceptance Testing (FAT) to ensure equipment functionality before delivery.",
+                "Defined and executed FMEA in line with GAMP 5 for the serialization project.",
+                "Supported qualification of packaging lines for Liquid, Semisolid, and Solid dosage forms, maintaining regulatory compliance."
+            ],
+            "environment": ["FDA Regulations", "LIMS", "TrackWise", "cGMP", "Consent Decree", "IQ/OQ/PQ", "MSA", "GMP/GCP/GLP", "CAPA", "SOX Audits", "GAMP 4 & 5"]
+        },
+        {
+            "role": "Associate Validation Engineer",
+            "client": "PPD, India",
+            "duration": "February 2017 - June 2019",
+            "responsibilities": [
+                "Led team meetings to efficiently plan and update validation activities.",
+                "Executed and documented Software IQ, OQ, and PQ to ensure user requirements and reproducible results were met.",
+                "Created comprehensive Validation Summary Reports to summarize qualification outcomes.",
+                "Supported qualification of new software suppliers through software supplier audits.",
+                "Led cross-functional teams to ensure timely execution of software validation processes, aligning with project milestones.",
+                "Conducted risk assessments, identifying challenges and implementing mitigation strategies for seamless project execution.",
+                "Collaborated with stakeholders to define software requirements and validation criteria, ensuring business and regulatory alignment.",
+                "Provided guidance and training to junior team members on validation best practices."
+            ],
+            "environment": ["Software Validation", "Risk Assessment", "Supplier Audits", "Cross-Functional Team Leadership", "Stakeholder Management"]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University of Wisconsin-Milwaukee, United States",
+            "degree": "Master of Science in Health Informatics",
+            "field": null,
+            "year": null
+        },
+        {
+            "institution": "Jawaharlal Nehru Technological University, Andhra Pradesh, India",
+            "degree": "Bachelor of Science in Doctor of Pharmacy",
+            "field": null,
+            "year": null
+        }
+    ],
+    "certifications": [
+        "Certified Computer System Validation Professional (CSV)",
+        "Certified GAMP 5 Practitioner",
+        "Certified Laboratory Information Management Professional (LIMSP)"
+    ]
+}

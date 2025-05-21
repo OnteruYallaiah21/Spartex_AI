@@ -1,0 +1,161 @@
+{
+    "name": "Balaji Pasam",
+    "title": "Network Engineer",
+    "contact": {
+        "email": "balu.p2108@gmail.com",
+        "phone": "+1 201-377-0476",
+        "portfolio": null,
+        "linkedin": null
+    },
+    "professional_summary": [
+        "Over 3 years of experience as a Network Engineer with a strong track record in designing, implementing, and optimizing network infrastructures. Expertise in networking technologies, automation, and security with a focus on collaboration and problem-solving. Proven ability to lead network projects, enhance performance, and improve security.",
+    ],
+    "technical_skills": {
+        "Networking Equipment": [
+            "Cisco Routers",
+            "Switches",
+            "FTD Firewalls",
+            "Nexus Series",
+            "Meraki",
+            "SRX Firewalls",
+            "FortiGate Firewalls",
+            "Cisco ISE",
+            "Palo Alto NGFW",
+            "Cisco Wireless LAN Controllers",
+            "Arista Switches"
+        ],
+        "Network Monitoring & Analysis": [
+            "SolarWinds NPM",
+            "Nagios",
+            "Zabbix",
+            "Wireshark",
+            "Splunk",
+            "AWS CloudWatch",
+            "Azure Monitor",
+            "GCP Stackdriver"
+        ],
+        "Automation & Scripting": [
+            "Ansible",
+            "Terraform",
+            "Puppet",
+            "Chef",
+            "Python",
+            "Spring",
+            "Docker"
+        ],
+        "Cloud Platforms": [
+            "AWS",
+            "Microsoft Azure",
+            "Google Cloud Platform (GCP)",
+            "Content Management Tools"
+        ],
+        "Protocols & Technologies": [
+            "IPv4/IPv6",
+            "BGP",
+            "OSPF",
+            "EIGRP",
+            "MPLS",
+            "QoS",
+            "NAT",
+            "Distributed Transactions",
+            "Latency Reduction"
+        ],
+        "Security & Access Control": [
+            "NAC solutions",
+            "VMware NSX",
+            "Cisco ACI",
+            "SD-WAN Solutions",
+            "Firewalls",
+            "VPNs",
+            "ACLs"
+        ],
+        "Other": [
+            "LAN",
+            "WAN",
+            "WLAN",
+            "Data Center Networks",
+            "Microservices",
+            "APIs",
+            "Optimization"
+        ]
+    },
+    "experience": [
+        {
+            "role": "Network Engineer",
+            "client": "Cisco",
+            "duration": "Jan 2023 – Current",
+            "responsibilities": [
+                "Developed and maintained comprehensive network documentation, including risk assessments, to ensure a proactive security posture.",
+                "Designed and implemented a robust network architecture to support over 250 concurrent users, improving user experience.",
+                "Optimized Arista switch configurations and WAN connections to increase network performance by 40%, while implementing QoS policies.",
+                "Enhanced security measures, reducing potential vulnerabilities by 30%, and integrated Arista CloudVision for a 25% improvement in troubleshooting.",
+                "Provided timely technical support for network incidents and conducted regular performance assessments to maintain optimal network operations.",
+                "Collaborated closely with IT security teams to enforce strict network access controls, strengthening overall network security.",
+                "Conducted code reviews for network-related changes to ensure adherence to best practices and security standards.",
+                "Performed latency reduction techniques to improve the responsiveness of critical applications."
+            ],
+            "environment": [
+                "Arista Switches",
+                "Cisco FTD",
+                "Palo Alto NGFW",
+                "AWS",
+                "Azure",
+                "GCP",
+                "SolarWinds NPM",
+                "Ansible",
+                "NAC Solutions",
+                "SD-WAN"
+            ]
+        },
+        {
+            "role": "Network Engineer",
+            "client": "Brane Enterprises – India",
+            "duration": "Oct 2020 – Nov 2022",
+            "responsibilities": [
+                "Deployed Cisco FTD and Palo Alto NGFW firewall solutions, resulting in a 50% reduction in security breaches.",
+                "Optimized BGP and OSPF routing protocols, improving network convergence times by 40%.",
+                "Implemented Cisco FTD for data center network automation, reducing provisioning times by 30%.",
+                "Designed and maintained a secure SD-WAN solution for 50+ bank branches, ensuring efficient connectivity.",
+                "Managed a high-availability WAN infrastructure supporting 50,000+ users and critical applications.",
+                "Configured and maintained reliable MPLS circuits for efficient data transfer.",
+                "Enhanced network visibility and control using Cisco Prime Infrastructure for management and monitoring.",
+                "Utilized Nagios and PRTG Network Monitor for real-time performance monitoring and proactive alerting.",
+                "Improved network programmability and automation using Arista EOS, reducing manual configuration errors.",
+                "Developed and enforced comprehensive network security policies, including firewall rules, VPN configurations, and access control lists (ACLs).",
+                "Implemented API integrations with cloud platforms to facilitate seamless data exchange and improve overall system interoperability."
+            ],
+            "environment": [
+                "Cisco FTD",
+                "Palo Alto NGFW",
+                "BGP",
+                "OSPF",
+                "Cisco Prime",
+                "Nagios",
+                "PRTG",
+                "Arista EOS",
+                "MPLS",
+                "AWS",
+                "Azure",
+                "GCP"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University of Cincinnati",
+            "degree": "Master of Information Technology",
+            "field": null,
+            "year": null
+        },
+        {
+            "institution": "Jawaharlal Nehru Technological University, Kakinada",
+            "degree": "Bachelor of Computer Science",
+            "field": null,
+            "year": null
+        }
+    ],
+    "certifications": [
+        "Cisco Certified Network Associate (CCNA)",
+        "Microsoft Certified: Azure Administrator Associate (AZ-104)"
+    ]
+}

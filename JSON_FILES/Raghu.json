@@ -1,0 +1,71 @@
+{
+    "name": "Raghu",
+    "title": "Software Engineer",
+    "contact": {
+        "email": "raghu@example.com",
+        "phone": "+1(123)-456-7890",
+        "portfolio": "https://ragHU.com",
+        "linkedin": "www.linkedin.com/in/ragHU"
+    },
+    "professional_summary": [
+        "Passionate Software Engineer with over 3 years of experience in designing, developing, and delivering robust software solutions.",
+        "Proficient in Java and Spring Boot framework, with a strong understanding of object-oriented programming and design patterns.",
+        "Experienced in full software development lifecycle, including requirements gathering, design, development, testing, and deployment.",
+        "Skilled in agile methodologies, having worked in Scrum and Kanban environments effectively.",
+        "Strong problem-solving abilities, with a track record of identifying and implementing innovative solutions to complex issues.",
+        "Collaborative team player, comfortable working with cross-functional teams and stakeholders to deliver projects on time and within scope.",
+        "Familiar with version control systems such as Git for collaborative development and continuous integration.",
+        "Committed to continuous learning and professional development, regularly updating skills and staying abreast of new technologies.",
+        "Strong verbal and written communication skills, capable of explaining technical concepts to both technical and non-technical stakeholders.",
+        "Dedicated to delivering high-quality, user-friendly software solutions that meet customer expectations and drive business success."
+    ],
+    "technical_skills": {
+        "Programming Languages": ["Java", "SQL", "Python"],
+        "Frameworks": ["Spring Boot", "Hibernate", "Spring MVC"],
+        "Tools": ["Git", "Jenkins", "JIRA", "Confluence"],
+        "Databases": ["MySQL", "PostgreSQL"],
+        "Design Patterns": ["MVC", "Factory", "Singleton"]
+    },
+    "experience": [
+        {
+            "role": "Software Engineer",
+            "client": "ABC Corp.",
+            "duration": "Jan 2023 - Present",
+            "responsibilities": [
+                "Developed modular, scalable, and secure web applications using Java and Spring Boot framework, adhering to design patterns and best practices.",
+                "Implemented data access layer using Spring Data and Hibernate for seamless database interaction and object-relational mapping.",
+                "Integrated RESTful APIs to facilitate communication between microservices and ensure seamless data exchange.",
+                "Utilized Git for version control, ensuring efficient collaboration among team members and facilitating continuous integration.",
+                "Conducted code reviews and provided constructive feedback to team members, ensuring code quality and adherence to coding standards.",
+                "Performed unit testing and integration testing to ensure the robustness and reliability of the developed software.",
+                "Collaborated with product owners and business analysts to understand requirements and translate them into technical specifications."
+            ],
+            "environment": ["Java", "Spring Boot", "MySQL", "Git", "Jenkins", "JIRA"]
+        },
+        {
+            "role": "Junior Software Engineer",
+            "client": "XYZ Inc.",
+            "duration": "Mar 2021 - Dec 2022",
+            "responsibilities": [
+                "Designed and developed Java-based applications, ensuring modularity and reusability of code.",
+                "Implemented MVC architecture using Spring MVC framework, separating concerns and improving code maintainability.",
+                "Utilized SQL queries for data manipulation and retrieval, ensuring efficient database interactions.",
+                "Worked in an agile environment, actively participating in daily stand-ups, sprint planning, and retrospectives.",
+                "Conducted code refactoring to improve code readability and performance, adhering to clean code principles."
+            ],
+            "environment": ["Java", "Spring MVC", "PostgreSQL", "JIRA"]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University of Technology",
+            "degree": "Bachelor of Science in Computer Science",
+            "field": "Computer Science",
+            "year": 2021
+        }
+    ],
+    "certifications": [
+        "Certified Scrum Master",
+        "Oracle Certified Associate: Java SE 8 Programmer"
+    ]
+}
