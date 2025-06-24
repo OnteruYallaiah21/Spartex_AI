@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  # Frontend Service (React App)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Map host port 3000 to container port 80 (Nginx default)
+    depends_on:
+      - platform_api_gateway # Frontend makes calls to the Gateway
+    restart: always
+
+  # API Gateway Service
+  platform_api_gateway:
+    build:
+      context: ./platform_api_gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" # Map host port 8000 to container port 8000
+    depends_on:
+      - resume_analyzer_service # Gateway talks to this
+      - auth_service            # Gateway talks to this for auth validation
+      - data_ingestion_service  # Gateway talks to this
+    restart: always
+
+  # Resume Analyzer Microservice
+  resume_analyzer_service:
+    build:
+      context: ./services/resume_analyzer_service
+      dockerfile: Dockerfile
+    # Internal port for the service. Exposing to 8001 on host for direct debugging if needed.
+    ports:
+      - "8001:8000"
+    restart: always
+
+  # Auth Service
+  auth_service:
+    build:
+      context: ./services/auth_service
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8000" # Expose to host port 8002 for direct debugging
+    restart: always
+
+  # Data Ingestion Service
+  data_ingestion_service:
+    build:
+      context: ./services/data_ingestion_service
+      dockerfile: Dockerfile
+    ports:
+      - "8003:8000" # Expose to host port 8003 for direct debugging
+    volumes:
+      - ./data_storage:/app/uploaded_files # Persistent storage for uploaded files
+    restart: always
+
+# Define a named volume for persistent storage of uploaded files
+volumes:
+  data_storage:
