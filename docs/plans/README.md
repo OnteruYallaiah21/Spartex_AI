@@ -1,4 +1,4 @@
-# SPARTEX AI - Autonomous Development Service (ADS)
+# SPARTEX AI - Autonomous software  Development Service (ADS)
 ## Complete Business Plan & Technical Documentation
 
 ---
